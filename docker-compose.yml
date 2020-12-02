@@ -7,4 +7,4 @@ services:
     environment:
       - POSTGRES_DB=youneverguessevenifwouldgonnatry
       - POSTGRES_USER=mrtotalsecurity
-      - POSTGRES_PASSWORD=vZJYfmq7z8A)~c@C^)3L%PR~DdK2Vm*I
+      - POSTGRES_PASSWORD=CzmGtmRjc3cLGV7KXza294520qCMYXuF
