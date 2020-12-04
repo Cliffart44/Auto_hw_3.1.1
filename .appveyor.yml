@@ -14,9 +14,11 @@ install:
   - docker-compose up -d
   - docker ps
   - netstat -na | grep "5432"
+  - sudo apt-get -qq update
+  - sudo apt-get install wait-for-it > /dev/null
 
 build_script:
   - java -jar db-api.jar &
-  - sleep 30
+  - wait-for-it localhost:9999 -t 100
   - netstat -na | grep "9999"
   - curl --show-error -X GET 'http://localhost:9999/api/cards'
